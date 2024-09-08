@@ -1,9 +1,6 @@
+import { Suspense } from "react";
 import styles from "../styles/movie-info.module.css";
-
-export async function getMovie(id: string) {
-  const response = await fetch(`${process.env.MOVIES}/${id}`);
-  return response.json();
-}
+import { getMovie } from "../utils/apis";
 
 interface IProps {
   id: string;

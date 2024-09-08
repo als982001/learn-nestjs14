@@ -1,9 +1,6 @@
 import styles from "../styles/movie-videos.module.css";
 
-async function getVideos(id: string) {
-  const response = await fetch(`${process.env.MOVIES}/${id}/videos`);
-  return response.json();
-}
+import { getVideos } from "../utils/apis";
 
 interface IProps {
   id: string;
